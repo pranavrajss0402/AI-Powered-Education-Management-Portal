@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply antialiased; }
+  :focus-visible {
+    outline: 2px solid #2A6664;
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== PUBLIC / ADMIN CSS (unchanged) ===== */
+
+.courses-page {
+  min-height: 100vh;
+  padding: 60px 8%;
+  background: #f5f7fb;
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.courses-header h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.courses-header p {
+  color: #667085;
+  font-size: 18px;
+}
+
+.course-controls {
+  display: flex;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.course-controls input,
+.course-controls select {
+  padding: 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: white;
+  font-size: 16px;
+}
+
+.course-controls input {
+  flex: 1;
+}
+
+.course-controls select {
+  width: 220px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.course-card {
+  padding: 28px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.course-card h2 {
+  margin: 15px 0;
+}
+
+.course-card p {
+  color: #667085;
+}
+
+.course-category {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e9efff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.course-card button {
+  margin-top: 15px;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #172033;
+  color: white;
+  cursor: pointer;
+}
+
+.no-courses {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-controls {
+    flex-direction: column;
+  }
+
+  .course-controls select {
+    width: 100%;
+  }
+}

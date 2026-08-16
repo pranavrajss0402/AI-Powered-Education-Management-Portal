@@ -1,0 +1,12 @@
+[
+    {
+        "student_id": 101,
+        "subject": "Mathematics",
+        "intervention_type": "ACADEMIC_SUPPORT",
+        "action": "Provided additional mathematics revision and practice questions",
+        "status": "EFFECTIVE",
+        "score_change": 17.0,
+        "attendance_change": 10.0,
+        "timestamp": "2026-08-16T14:57:29.264157"
+    }
+]
